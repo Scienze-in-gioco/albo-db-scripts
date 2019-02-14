@@ -1,0 +1,27 @@
+{
+  "name": "albo-db-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "node . deleteTables",
+    "create": "node . createTables && node . insertSchools && node . studentSeeder && node . insertSubjects && node . insertCompetitions",
+    "refresh": "npm run clean && npm run create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scienze-in-gioco/albo-db-scripts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scienze-in-gioco/albo-db-scripts/issues"
+  },
+  "homepage": "https://github.com/Scienze-in-gioco/albo-db-scripts#readme",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "simple-argv": "^1.1.1"
+  }
+}
